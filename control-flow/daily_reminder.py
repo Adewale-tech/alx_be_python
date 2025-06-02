@@ -1,12 +1,27 @@
- GNU nano 8.2              daily_reminder.py               Modified
-    case "low":
-        message = f"Note: '{task}' is a low priority task"
-    case _:
-<level"# Time-sensitivity condition 
-if time_bound == "yes":
- message += " that requires immediate attention today!"
-else:
-    message += ". Consider completing it when you have free time."
+# daily_reminder.py
 
-# Final output (must start with Reminder:)
-print(f"{message}")
+# Prompt for task details
+task = input("Enter your task: ")
+priority = input("Priority (high/medium/low): ").lower()
+time_bound = input("Is it time-bound? (yes/no): ").lower()
+
+# Process using match-case
+match priority:
+    case "high":
+        reminder = f"Reminder: '{task}' is a high priority task"
+    case "medium":
+        reminder = f"Reminder: '{task}' is a medium priority task"
+    case "low":
+        reminder = f"Reminder: '{task}' is a low priority task"
+    case _:
+        reminder = f"Reminder: '{task}' has an unspecified priority level"
+
+# Check time sensitivity
+if time_bound == "yes":
+    reminder += " that requires immediate attention today!"
+else:
+    reminder += ". Consider completing it when you have free time."
+
+# Print final output
+print(reminder)
+
