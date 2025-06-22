@@ -1,5 +1,5 @@
 class Book:
-    """Base Book class"""
+    """Base class for all books"""
     def __init__(self, title, author):
         self.title = title
         self.author = author
@@ -9,7 +9,7 @@ class Book:
 
 
 class EBook(Book):
-    """EBook class derived from Book"""
+    """Derived class for electronic books"""
     def __init__(self, title, author, file_size):
         super().__init__(title, author)
         self.file_size = file_size
@@ -19,7 +19,7 @@ class EBook(Book):
 
 
 class PrintBook(Book):
-    """PrintBook class derived from Book"""
+    """Derived class for printed books"""
     def __init__(self, title, author, page_count):
         super().__init__(title, author)
         self.page_count = page_count
@@ -29,7 +29,7 @@ class PrintBook(Book):
 
 
 class Library:
-    """Library class using composition to manage books"""
+    """Class to manage a collection of books"""
     def __init__(self):
         self.books = []
 
