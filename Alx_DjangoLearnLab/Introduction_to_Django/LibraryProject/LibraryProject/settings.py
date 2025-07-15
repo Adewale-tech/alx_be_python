@@ -30,13 +30,9 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+INSTALLED_APPS = [ 'django.contrib.admin', 'django.contrib.auth', 
+    'django.contrib.contenttypes', 'django.contrib.sessions', 
+    'django.contrib.messages', 'django.contrib.staticfiles', 'bookshelf',
 ]
 
 MIDDLEWARE = [
@@ -46,7 +42,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',                 'bookshelf',
 ]
 
 ROOT_URLCONF = 'LibraryProject.urls'
