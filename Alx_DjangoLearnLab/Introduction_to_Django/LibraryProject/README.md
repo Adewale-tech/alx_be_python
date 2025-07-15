@@ -1,1 +1,1 @@
-# LibraryProject - Django Introduction
+# My Django Project: LibraryProject
