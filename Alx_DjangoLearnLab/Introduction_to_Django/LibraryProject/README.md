@@ -1,1 +1,1 @@
-# My Django Project: LibraryProject
+# Django LibraryProject Setup for ALX
